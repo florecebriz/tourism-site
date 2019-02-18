@@ -1,3 +1,4 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/0f0fb593-92be-48cf-af23-82d2e6c19aa0/deploy-status)](https://app.netlify.com/sites/lavezares-tourism/deploys)
 # Tourism Site
 
 A working in progress web based app that promote Tourist Spot.
