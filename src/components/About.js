@@ -10,7 +10,7 @@ import { ReactComponent as Heart } from "../assets/svg/heart.svg";
 class About extends Component {
   render() {
     return (
-      <div>
+      <div id="bodyCarousel">
         <MainCarousel />
 
         <div className="subComponent" id="aboutBody">
@@ -42,7 +42,7 @@ class About extends Component {
                 <Col lg="3" md="6" sm="6">
                   <div className="svg-card">
                     <Compass width="48" height="48" strokeWidth="1" />
-                    <p>Travel Insurance</p>
+                    <p>Travel Navigation</p>
                   </div>
                 </Col>
               </Row>

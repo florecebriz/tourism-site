@@ -2,107 +2,107 @@ import React, { Component } from "react";
 import { Container, Row, CardColumns, Badge } from "reactstrap";
 import TourCard from "./TourCard";
 import "../App.css";
-import imgCard1 from "../img/img-card (1).jpg";
-import imgCard2 from "../img/img-card (2).jpg";
-import imgCard3 from "../img/img-card (3).jpg";
-import imgCard4 from "../img/img-card (4).jpg";
-import imgCard5 from "../img/img-card (5).jpg";
-import imgCard6 from "../img/img-card (6).jpg";
-import imgCard7 from "../img/img-card (7).jpg";
-import imgCard8 from "../img/img-card (8).jpg";
-import imgCard9 from "../img/img-card (9).jpg";
-import imgBarobaybay from "../img/barobaybay.jpg";
+import lalaguna from "./tours/lalaguna-bay-mangrove-forest/img1.jpg";
+import imgtabok from "./tours/tabok/img1.jpg";
+import landmark from "./tours/landmark/img1.jpg";
+import imgMarson from "./tours/marson/cover.jpg";
+import imgCagomaoas from "./tours/cagomaoas/img1.jpg";
+import imgRisenChrist from "./tours/risen-christ/cover.jpg";
+import imgBangkawan from "./tours/bangkawan/cover.jpg";
+import imgJhonsGarden from "./tours/jhons-garden/thumbnail.jpg";
+import imgPPP from "./tours/ppp/img1.jpg";
+
 const tours = [
   {
     id: 1,
-    category: ["resort", "honeymoon"],
-    img: imgCard1,
+    category: ["resort", "honeymoon", "beach", "camping", "scape"],
+    img: imgMarson,
     alt: "blah blah",
-    title: "Seaside Resort",
-    subtitle: "Batangas Resort"
+    title: "Marson's Beach Resort - Villa Patria",
+    subtitle: "Bani Island",
+    router: "marson"
   },
   {
     id: 2,
-    category: ["beach", "mountain"],
-    img: imgCard2,
+    category: ["beach", "camping", "honeymoon", "resort"],
+    img: imgtabok,
     alt: "blah blah",
-    title: "Isla de Gigantes",
-    subtitle: "Carles, Iloilo"
+    title: "Tabok Beach Camping & Diving Resort",
+    subtitle: "Martinez Family",
+    router: "tabok"
   },
   {
     id: 3,
-    category: ["resort", "honeymoon"],
-    img: imgCard3,
+    category: ["scape"],
+    img: landmark,
     alt: "blah blah",
-    title: "The Farm",
-    subtitle: "San Benito, Batangas"
+    title: "Landmark of the Risen Jesus (Nuestra Señora de Salvacion Statue)",
+    subtitle: "Lavezares landmark",
+    router: "landmark"
   },
   {
     id: 4,
-    category: ["climbing", "mountain"],
-    img: imgCard4,
+    category: ["scape"],
+    img: imgJhonsGarden,
     alt: "blah blah",
-    title: "Poog",
-    subtitle: "Cebu"
+    title: "Jhon's Garden",
+    subtitle: "Brgy. Barobaybay",
+    router: "jhons-garden"
   },
   {
     id: 5,
-    category: ["resort", "honeymoon", "beach"],
-    img: imgCard5,
+    category: ["scape"],
+    img: lalaguna,
     alt: "blah blah",
-    title: "Koro Sun Resort & Rainforest Spa",
-    subtitle: "Vanua Levu, Fiji"
+    title: "Lalaguna Bay Mangrove Forest",
+    subtitle: "San Isidro",
+    router: "lalaguna"
   },
   {
     id: 6,
-    category: ["climbing", "mountain"],
-    img: imgCard6,
+    category: ["resort"],
+    img: imgCagomaoas,
     alt: "blah blah",
-    title: "Pi Shan",
-    subtitle: "Yangshuo China"
+    title: "Cagumao-as Leisure Farm",
+    subtitle: "Villahermosa",
+    router: "cagumao-as"
   },
   {
     id: 7,
-    category: ["beach", "climbing"],
-    img: imgCard7,
+    category: ["beach", "scape"],
+    img: imgRisenChrist,
     alt: "blah blah",
-    title: "El-Nido",
-    subtitle: "Palawan"
+    title: "The Shrine of the Risen Christ",
+    subtitle: "Brgy. Balicuatro",
+    router: "risen-christ"
   },
   {
     id: 8,
-    category: ["honeymoon", "beach", "resort"],
-    img: imgCard8,
+    category: ["beach", "camping", "resort"],
+    img: imgBangkawan,
     alt: "blah blah",
-    title: "Shangri-La’s Boracay Resort and Spa",
-    subtitle: "Boracay Resort"
+    title: "Bangkawan Cove & Camping Resort",
+    subtitle: "Bangkawan Island",
+    router: "bangkawan"
   },
   {
     id: 9,
-    category: ["beach", "resort"],
-    img: imgCard9,
+    category: ["resort"],
+    img: imgPPP,
     alt: "blah blah",
-    title: "HUMANA Island Resort & Spa",
-    subtitle: "Palawan"
-  },
-  {
-    id: 10,
-    category: ["camping", "beach"],
-    img: imgBarobaybay,
-    alt: "camping in the lake",
-    title: "Barobaybay Camp Site",
-    subtitle: "Barobaybay, Lavezares N. Samar"
+    title: "Chiara's & Clyde Resort",
+    subtitle: "Cataogan",
+    router: "ppp"
   }
 ];
 
 const itemCategories = [
   "all",
   "beach",
-  "mountain",
   "resort",
-  "climbing",
   "camping",
-  "honeymoon"
+  "honeymoon",
+  "scape"
 ];
 
 class Package extends Component {
@@ -121,8 +121,8 @@ class Package extends Component {
       <div className="subComponent-lg" id="packageBody">
         <Container>
           <header className="headerTitle text-center">
-            <h1>Tour Packages</h1>
-            <p>A Great Collection of Our Tour Packages</p>
+            <h1>Tour Collection</h1>
+            <p>A Great Collection of Our Tours</p>
           </header>
           <section className="packageBody text-center">
             {itemCategories.map((badge, index) => (
